@@ -82,16 +82,24 @@ XAI 시각적 검증:Grad-CAM 히트맵을 통해 모델이 결함으로 판단�
 
 AI 판단 신뢰성 확보:Grad-CAM 기반 시각적 근거를 제공하여 현장 작업자의 AI 수용성을 높이고 잘못 분리하는 상황 발생 시 신속한 원인 규명이 가능해집니다.
 
+결함 대응 범위 확대:새로운 특징 데이터가 발생해도 재학습이 간단하여 범용성이 뛰어난 딥러닝의 특성을 불균일에 의하여 다양한 클래스내 다양성을 가지는 철강에 적합합니다.
+
 ## 5. 추진 일정
 
 | 주차 | 수행 내용 | 결과물 |
-|9주차|NEU 데이터셋 수집 및 비율별 데이터 분할|데이터 구성 및 EDA 결과|
-|10주차|MobileNetV2 사전학습 모델 구축 및 백본 동결 학습|Baseline 학습 코드 및 학습 곡선	|
-|11주차|Data Augmentation 파이프라인 추가 및 전후 비교 실험|증강 전후 비교 실험 보고서|
-|12주차|미세조정 적용 및 6×6 혼동 행렬 분석|성능 평가 지표 및 혼동 행렬|
-|13주차|Grad-CAM 파이프라인 구축 및 히트맵 시각화 검증|Grad-CAM 히트맵 시각화 결과물|
-|14주차|이미지당 추론 시간(ms) 측정 및 오분류 사례 세부 분석|최종 결과 분석 리포트|
-|15주차|프로젝트 최종 보고서 작성, 제출 및 발표|최종 보고서|
+| 9주차 | NEU 데이터셋 수집 및 비율별 데이터 분할 | 데이터 구성 및 EDA 결과 |
+
+| 10주차 | MobileNetV2 사전학습 모델 구축 및 백본 동결 학습 | Baseline 학습 코드 및 학습 곡선	|
+
+| 11주차 | Data Augmentation 파이프라인 추가 및 전후 비교 실험 | 증강 전후 비교 실험 보고서 |
+
+| 12주차 | 미세조정 적용 및 6×6 혼동 행렬 분석 | 성능 평가 지표 및 혼동 행렬 |
+
+| 13주차 | Grad-CAM 파이프라인 구축 및 히트맵 시각화 검증 | Grad-CAM 히트맵 시각화 결과물 |
+
+| 14주차 | 이미지당 추론 시간(ms) 측정 및 오분류 사례 세부 분석 | 최종 결과 분석 리포트 |
+
+| 15주차 | 프로젝트 최종 보고서 작성, 제출 및 발표 | 최종 보고서 |
 
 ## 6. 참고 자료
 
@@ -101,6 +109,6 @@ Dataset for classifying 6 types of surface defects](https://www.kaggle.com/datas
 - [Automatic Detection and Classification of Steel Surface Defect Using Deep Convolutional Neural Networks](https://www.mdpi.com/2075-4701/11/3/388)
 - [Grad-CAM 기반 딥러닝 분류 모델을 활용한 강판 표면 결함의 비파괴 시각화 기법](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003227886)
 - [tf.keras.applications.MobileNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2?)
-- [자료 제목](URL)
-- [자료 제목](URL)
+- [딥러닝 및 전이학습을 이용한 표면결함 분류에 관한 연구](https://chains.dcollection.net/public_resource/pdf/200000173846_20261021024921.pdf)
+
 
