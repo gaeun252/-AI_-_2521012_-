@@ -24,6 +24,8 @@
 정확도, 정밀도, 재현율, F1-score 및 혼동 행렬을 활용하여 결함 별 분류 성능을 평가합니다.모델의 판단 근거를 직관적으로 설명할 수 있는 장점을 가진 Grad-CAM을 활용하여 모델이 결함을 
 분류할 때 중요하게 활용한 영역을 시각화를 한것을 토대로 판단하여.실제 결함을 정상으로 잘못 분류할 가능성에 대한 것을 유의하여 품질 검사의 개선점을 도출합니다. 
 
+[A Survey of Vision-Based Methods for Surface Defects’ Detection and Classification in Steel Products](https://www.mdpi.com/2227-9709/11/2/25)
+[Automatic Detection and Classification of Steel Surface Defect Using Deep Convolutional Neural Networks](https://www.mdpi.com/2075-4701/11/3/388)
 
 ## 2. 과제 소개 (What)
 
@@ -45,6 +47,9 @@
 데이터 분할:학습 데이터, 검증 데이터, 테스트 데이터를 70:15:15, 80:10:10, 60:20:20중에 가장 효과가잇는 것으로 분할한 후 각 결함 유형이 데이터 분할에 고르게 포함되도록 모집단을 
 특성에 따라 나누어 각 하위 집단에서 표본의 추출을 적용합니다.
 
+[NEU Surface Defect Database
+Dataset for classifying 6 types of surface defects](https://www.kaggle.com/datasets/kaustubhdikshit/neu-surface-defect-database)
+
 
 ### 3.2. 데이터 전처리
 이미지 분할 및 전이 학습 및 미세 조정에 적합해야 하며 각도, 위치, 크기의 영향이 작아야 합니다.따라서 아래와 같은 방법을 선택하였습니다. 
@@ -55,6 +60,8 @@
 수직 반전 및 90도 회전은 배제합니다.
 
 데이터 누출 방지:증강 파이프라인은 학습 데이터 세트에만 적용하고 검증 및 테스트 세트는 원본을 유지합니다.
+
+[tf.keras.applications.MobileNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2?)
 
 ### 3.3. 모델 설계 및 학습
 1.학습된 MobileNetV2 을 선택하여 사전 학습 모델을 한다.
@@ -73,6 +80,8 @@
 
 XAI 시각적 검증:Grad-CAM 히트맵을 통해 모델이 결함으로 판단한 핵심 영역을 시각화하고,실제 결함 위치와의 일치 여부 및 Shortcut Learning 발생 여부를 판정합니다.
 
+[Grad-CAM 기반 딥러닝 분류 모델을 활용한 강판 표면 결함의 비파괴 시각화 기법](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003227886)
+
 ## 4. 기대효과 (Result)
 
 품질 검사 자동화 및 비용 절감:육안 검사의 판정 편차를 해소하고,실제로는 결함이 존재하나 모델이 해당 결함을 제대로 검출하지 못한 경우로 인한 고객 클레임 비용 및 불필요한 재작업 및 
@@ -83,6 +92,8 @@ XAI 시각적 검증:Grad-CAM 히트맵을 통해 모델이 결함으로 판단�
 AI 판단 신뢰성 확보:Grad-CAM 기반 시각적 근거를 제공하여 현장 작업자의 AI 수용성을 높이고 잘못 분리하는 상황 발생 시 신속한 원인 규명이 가능해집니다.
 
 결함 대응 범위 확대:새로운 특징 데이터가 발생해도 재학습이 간단하여 범용성이 뛰어난 딥러닝의 특성을 불균일에 의하여 다양한 클래스내 다양성을 가지는 철강에 적합합니다.
+
+[딥러닝 및 전이학습을 이용한 표면결함 분류에 관한 연구](https://chains.dcollection.net/public_resource/pdf/200000173846_20261021024921.pdf)
 
 ## 5. 추진 일정
 
